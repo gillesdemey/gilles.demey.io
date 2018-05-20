@@ -4,7 +4,7 @@
 
 body {
   font-size: 13px;
-  color: white;
+  color: #f1f1f0;
 }
 
 body {
@@ -18,8 +18,6 @@ body, pre, code {
 html, body, pre {
   margin: 0;
   padding: 0;
-
-  color: white;
 }
 
 #about {
@@ -40,12 +38,8 @@ html, body, pre {
   justify-content: space-between;
 }
 
-#pgp-key {
-  color: white;
-}
-
 .button {
-  color: white;
+  color: #f1f1f0;
   text-align: center;
   padding: 7px 13px;
 
@@ -60,4 +54,12 @@ html, body, pre {
   border-color: #9aedfe;
 
   box-shadow: 8px 8px 0px 0px #9aedfe;
+}
+
+#intro {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+span.text--shiny {
+  color: white;
 }

@@ -1,8 +1,8 @@
 onReady(() => {
   new Shiny({
-    width: 4,
-    speed: 80,
-    delayInBetween: 2000
+    width: 7,
+    speed: 50,
+    delayInBetween: 2500
   }).animate(document.querySelector("#intro"))
 })
 
@@ -12,7 +12,7 @@ onReady(() => {
 function Shiny (options = {}) {
   const defaults = {
     width: 2,
-    color: 'rgba(255, 255, 255, 0.6)',
+    elemClass: 'text--shiny',
     speed: 50,
     delayInBetween: 2000
   }
@@ -25,7 +25,7 @@ function Shiny (options = {}) {
 Shiny.prototype.animate = function (elem) {
   const text = elem.innerText
 
-  const { color, delayInBetween, speed, width } = this.options
+  const { delayInBetween, elemClass, speed, width } = this.options
 
   let { _cursor: cursor, _interval: interval } = this
 
@@ -42,7 +42,7 @@ Shiny.prototype.animate = function (elem) {
   // all characters in that column
   function animateColumns () {
     return setInterval(() => {
-      const output = colorColumn(text, cursor, width, { color })
+      const output = styleColumn(text, cursor, width, { class: elemClass })
       elem.innerHTML = output
 
       if (cursor >= columns) {
@@ -65,19 +65,19 @@ Shiny.prototype.animate = function (elem) {
 }
 
 
-// color a single column of text
-function colorColumn (input, cursor, width, style = {}) {
-  const styleText = Object.entries(style)
-    .map(entry => entry.join(':'))
-    .join(';')
+// style a single column of text
+function styleColumn (input, cursor, width, props = {}) {
+  const propsText = Object.entries(props)
+    .map(entry => entry.join('='))
+    .join(' ')
 
   return input
     .split('\n')
     .map(line => {
       return line.split('').map((char, i) => {
-        const inColumn = (i >= cursor && i <= cursor + width)
+        const inColumn = (i >= cursor && i < cursor + width)
         return inColumn
-          ? `<span style="${styleText}">${char}</span>`
+          ? `<span ${propsText}>${char}</span>`
           : char
       })
       .join('')
