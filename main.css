@@ -1,0 +1,17 @@
+body {
+  background: black;
+}
+
+html, body, pre {
+  margin: 0;
+  padding: 0;
+}
+
+#background {
+  background: black;
+}
+
+#pgp-key {
+  background: black;
+  color: white;
+}
