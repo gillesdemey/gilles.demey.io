@@ -1,17 +1,63 @@
+::selection {
+  background: #92bcd0;
+}
+
 body {
-  background: black;
+  font-size: 13px;
+  color: white;
+}
+
+body {
+  background: #282a36;
+}
+
+body, pre, code {
+  font-family: "Menlo", "Courier New", monospace;
 }
 
 html, body, pre {
   margin: 0;
   padding: 0;
+
+  color: white;
 }
 
-#background {
-  background: black;
+#about {
+  width: 640px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+#social {
+  position: absolute;
+  bottom: 35px;
+  left: 100px;
+
+  width: 400px;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 #pgp-key {
-  background: black;
   color: white;
+}
+
+.button {
+  color: white;
+  text-align: center;
+  padding: 7px 13px;
+
+  border: solid 1px rgba(255, 255, 255, .9);
+  box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, .2);
+
+  text-decoration: none;
+}
+
+.button:hover {
+  color: #9aedfe;
+  border-color: #9aedfe;
+
+  box-shadow: 8px 8px 0px 0px #9aedfe;
 }
