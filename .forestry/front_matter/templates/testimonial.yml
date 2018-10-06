@@ -22,3 +22,5 @@ fields:
   label: Customer Image
   name: avatar
   description: Customer's image
+pages:
+- content/home.md
