@@ -1,0 +1,24 @@
+---
+label: Testimonial
+hide_body: false
+is_partial: false
+fields:
+- type: textarea
+  label: Quote
+  name: quote
+  description: This is the customer's quote
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: text
+  name: author
+  label: Author
+  description: Why authored the quote
+  config:
+    required: true
+- type: file
+  label: Customer Image
+  name: avatar
+  description: Customer's image
