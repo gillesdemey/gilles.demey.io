@@ -2,4 +2,9 @@
 label: Home
 hide_body: false
 is_partial: false
-fields: []
+fields:
+- type: include
+  name: testimonials
+  label: Testimonials
+  description: A selection of customer testimonials
+  template: testimonial
