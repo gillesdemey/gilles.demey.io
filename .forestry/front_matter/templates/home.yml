@@ -8,5 +8,3 @@ fields:
   label: Testimonials
   description: A selection of customer testimonials
   template: testimonial
-pages:
-- content/home.md
